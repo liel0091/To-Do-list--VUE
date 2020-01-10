@@ -19,15 +19,19 @@
         },
         methods: {
             addToDo(e) {
-                e.preventDefault();
+                e.preventDefault();  
 
                 const newTodo = { 
                     title: this.title,
                     completed: false
-                }
+                } 
 
-                this.$emit('add-todo', newTodo);
-                this.title = "";
+                if(newTodo.title){
+                    this.$emit('add-todo', newTodo);
+                    this.title = "";
+                }else {
+                    alert('Please describe your task')
+                } 
             }
         }
     }
