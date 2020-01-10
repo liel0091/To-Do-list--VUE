@@ -1,10 +1,9 @@
 <template>
-<div>
-    <h1>To Do List</h1>
-    <ul v-bind:key="item.id" v-for="item in toDoList"> 
-       <ToDoItem v-bind:item="item" v-on:del-todo="$emit('del-todo', item.id)"/>
-    </ul>
-</div>  
+    <div class="mt-5"> 
+        <b-list-group v-bind:key="item.id" v-for="item in toDoList"> 
+            <ToDoItem v-bind:item="item" v-on:del-todo="$emit('del-todo', item.id)"/>
+        </b-list-group>
+    </div>  
 </template>
 
 <script>

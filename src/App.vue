@@ -2,7 +2,9 @@
   <div id="app">  
     <Header/>
     <AddToDo v-on:add-todo="addToDo"/>
-    <ToDoList v-bind:toDoList="toDoList" v-on:del-todo="deleteToDo"/>
+    <b-container fluid>
+       <ToDoList v-bind:toDoList="toDoList" v-on:del-todo="deleteToDo"/>
+    </b-container> 
   </div>
 </template> 
 

@@ -1,10 +1,12 @@
-<template>
-    <div>
-        <form @submit="addToDo">
-            <input type="text" v-model="title" name="title" placeholder="Add to do ..." />
-            <input type="submit" value="Submit" class="btn" />
-        </form>
-    </div> 
+<template>   
+    <b-card bg-variant="light"> 
+
+        <label for="input-large">Add task:</label> 
+        <b-form @submit="addToDo" class="d-flex justify-content-between"> 
+            <b-form-input id="input-large" size="lg" type="text" v-model="title" name="title" placeholder="Add to do ..." />
+            <b-button variant="warning" class="ml-2" type="submit">Submit</b-button>
+        </b-form>   
+    </b-card>  
 </template>
 
 <script> 
