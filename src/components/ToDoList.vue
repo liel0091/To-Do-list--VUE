@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5"> 
+    <div class="mt-5 mb-5"> 
         <b-list-group v-bind:key="item.id" v-for="item in toDoList"> 
             <ToDoItem v-bind:item="item" v-on:del-todo="$emit('del-todo', item.id)"/>
         </b-list-group>
